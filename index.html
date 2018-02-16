@@ -1,87 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
-  <!-- <nav class="navbar">
-    <a href="#" class="navbar-brand">SW Character Searcher</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="input-search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="btn-search">Search</button>
-    </form>
-  </nav> -->
-  <div id="lateral">
-    <img src="assets/img/star-wars-logo.svg" alt="" id="logo">
-    <div id="info">
-      <h1>Index</h1>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Swardex</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <div id="main-container">
+      <div id="sidebar">
+        <img src="assets/img/star-wars-logo.svg" alt="" id="logo">
+      </div>
+      <div id="content" class="container">
+        <div class="row">
+          <div class="col-sm">
+            <img src="assets/img/characters/luke-skywalker.png" alt="Luke Skywalker" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/leia-organa.png" alt="Leia Organa" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/han-solo.png" alt="Han Solo" class="character">
+          </div>
+          <div class="col-sm">
+              <img src="assets/img/characters/chewbacca.png" alt="Chewbacca" class="character">
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <img src="assets/img/characters/r2-d2.png" alt="R2-D2" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/c3po.png" alt="C-3PO" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/darth-vader.png" alt="Darth Vader" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/lando-calrissian.png" alt="Lando Calrissian" class="character">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <img src="assets/img/characters/yoda.png" alt="Yoda" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/jabba-the-hut.png" alt="Jabba" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/general-ackbar.png" alt="Ackbar" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/boba-fett.png" alt="Boba Fett" class="character">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <img src="assets/img/characters/qui-gon-jinn.png" alt="Qui Gon Jinn" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/anakin-skywalker.png" alt="Anakin Skywalker" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/obi-wan-kenobi.png" alt="Obi Wan Kenobi" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/padme-amidala.png" alt="Padmé Amidala" class="character">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <img src="assets/img/characters/darth-maul.png" alt="Darth Maul" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/ahsoka-tano.png" alt="Ahsoka Tano" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/sheev-palpatine.png" alt="Palpatine" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/kylo-ren.png" alt="Ben Solo" class="character">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <img src="assets/img/characters/rey.png" alt="Rey" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/finn.png" alt="Finn" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/bb8.png" alt="BB8" class="character">
+          </div>
+          <div class="col-sm">
+            <img src="assets/img/characters/poe-dameron.png" alt="Poe Dameron" class="character">
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="container" id="result-container">
-    <div class="row">
-      <div class="col-sm">
-        <img src="assets/img/characters/luke-skywalker.png" alt="Luke Skywalker" class="character">
-      </div>
-      <div class="col-sm">
-        <img src="assets/img/characters/leia-organa.png" alt="Leia Organa" class="character">
-      </div>
-      <div class="col-sm">
-        <img src="assets/img/characters/han-solo.png" alt="Han Solo" class="character">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm">
-        <img src="assets/img/characters/chewbacca.png" alt="Chewbacca" class="character">
-      </div>
-      <div class="col-sm">
-        <img src="assets/img/characters/r2-d2.png" alt="R2-D2" class="character">
-      </div>
-      <div class="col-sm">
-        <img src="assets/img/characters/c3po.png" alt="C-3PO" class="character">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm">
-        <img src="assets/img/characters/lando-calrissian.png" alt="Lando Calrissian" class="character">
-      </div>
-      <div class="col-sm">
-        <img src="assets/img/characters/darth-vader.png" alt="Darth Vader" class="character">
-      </div>
-      <div class="col-sm">
-        <img src="assets/img/characters/obi-wan-kenobi.png" alt="Obi Wan Kenobi" class="character">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm">
-        <img src="assets/img/characters/qui-gon-jinn.png" alt="Qui Gon Jinn" class="character">
-      </div>
-      <div class="col-sm">
-        <img src="assets/img/characters/anakin-skywalker.png" alt="Anakin Skywalker" class="character">
-      </div>
-      <div class="col-sm">
-        <img src="assets/img/characters/padme-amidala.png" alt="Padmé Amidala" class="character">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm">
-        <img src="assets/img/characters/darth-maul.png" alt="Darth Maul" class="character">
-      </div>
-      <div class="col-sm">
-        <img src="assets/img/characters/yoda.png" alt="Yoda" class="character">
-      </div>
-      <div class="col-sm">
-        <img src="assets/img/characters/sheev-palpatine.png" alt="Palpatine" class="character">
-      </div>
-    </div>
-    <div class="row">
+  <!-- 
+     ss="row">
       <div class="col-sm">
         <img src="assets/img/characters/rey.png" alt="Rey" class="character">
       </div>
@@ -97,29 +118,15 @@
         <img src="assets/img/characters/bb8.png" alt="BB8" class="character">
       </div>
       <div class="col-sm">
-        <img src="assets/img/characters/kylo-ren.png" alt="Ben Solo" class="character">
-      </div>
-      <div class="col-sm">
-        <img src="assets/img/characters/general-ackbar.png" alt="Ackbar" class="character">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm">
-        <img src="assets/img/characters/ahsoka-tano.png" alt="Ahsoka Tano" class="character">
-      </div>
-      <div class="col-sm">
-        <img src="assets/img/characters/boba-fett.png" alt="Boba Fett" class="character">
-      </div>
-      <div class="col-sm">
-        <img src="assets/img/characters/general-ackbar.png" alt="Ackbar" class="character">
-      </div>
-    </div>
-  </div>
-  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
-  <script src="assets/js/characters.js"></script>
-  <script src="assets/js/functions.js"></script>
-  <script src="assets/js/app.js"></script>
-</body>
+        <img src="assets/img/characters/kylo-ren.png" alt="Ben Solo" class="character">v>
+  </div> -->
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/app-particles.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+    <script src="assets/js/characters.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>
