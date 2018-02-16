@@ -1,6 +1,6 @@
 const characters = [
   {
-    name: 'Ben Solo',
+    name: 'Ben Solo / Kylo Ren',
     nickname: 'Kylo Ren',
     height: '189',
     hair_color: 'black',
