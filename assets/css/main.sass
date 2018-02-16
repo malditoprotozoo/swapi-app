@@ -30,6 +30,16 @@ body
     padding: 3em
     .character
       width: 100%
+  #modal
+    .modal-body
+      .row
+        #loader
+          width: 100%
+          @include flex
+          img
+            max-width: 10em
+
+
 
 @media (max-width: $breakpoint-tablet)
   body

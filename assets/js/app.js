@@ -7,7 +7,9 @@ $(document).ready(function() {
   });
 
   $('.character').click(function() {
+    $('#modal .row').children().remove();
     let text = $(this).attr('alt');
     getInfo(text);
+    $('#modal').modal('show');
   });
 });

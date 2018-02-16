@@ -1,4 +1,5 @@
 const getInfo = text => {
+  $('#modal .row').html(`<div id='loader'><img src='assets/img/stormtrooper.gif'></div>`);
   const response = fetch(`https://swapi.co/api/people/?search=${text}`);
   response
     .then(data => data.json())
@@ -31,7 +32,7 @@ const getInfoModal = text => {
 const postInfoModal = (data) => {
   let results = data.map((obj) => {
     let planet;
-    console.log(`Name: ${obj.name}`);
+    $('#modal .row').html(`<div class='col-sm'><p><span class='description'>Name:</span> ${obj.name}</p></div>`);
     console.log(`Height: ${obj.height}`);
     console.log(`Hair Color: ${obj['hair_color']}`);
     console.log(`Skin Color: ${obj['skin_color']}`);
