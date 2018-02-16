@@ -1,3 +1,33 @@
+const getInfo = text => {
+  const response = fetch(`https://swapi.co/api/people/?search=${text}`);
+  response
+    .then(data => data.json())
+    .then(data => {
+      if (data.count !== 0) {
+        postInfoModal(data.results);
+      } else if (data.count === 0) {
+        if (checkName(text) === undefined) {
+          console.log('error');
+        } else {
+          getInfoOutApi(checkName(text));
+        }
+      }
+    });
+};
+
+const postInfo = (data) => {
+  let results = data.map((obj) => {
+    $('#result-container').append(`<h2>${obj.name}</h2>`);
+  });
+};
+
+const getInfoModal = text => {
+  const response = fetch(`https://swapi.co/api/people/?search=${text}`);
+  response
+    .then(data => data.json())
+    .then(data => postInfoModal(data.results));
+};
+
 const postInfoModal = (data) => {
   let results = data.map((obj) => {
     let planet;
