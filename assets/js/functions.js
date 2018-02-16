@@ -32,20 +32,21 @@ const getInfoModal = text => {
 const postInfoModal = (data) => {
   let results = data.map((obj) => {
     let planet;
-    $('#modal .row').html(`<div class='col-sm'><p><span class='description'>Name:</span> ${obj.name}</p></div>`);
-    console.log(`Height: ${obj.height}`);
-    console.log(`Hair Color: ${obj['hair_color']}`);
-    console.log(`Skin Color: ${obj['skin_color']}`);
-    console.log(`Mass: ${obj.mass}`);
-    console.log(`Eye Color: ${obj['eye_color']}`);
-    console.log(`Birth Year: ${obj['birth_year']}`);
-    console.log(`Gender: ${obj.gender}`);
+    $('#modal .row').html(`<div class='col-sm'></div>`)
+    $('#modal .row .col-sm').append(`<p><span class='description'>Name:</span> ${obj.name}</p>`);
+    $('#modal .row .col-sm').append(`<p><span class='description'>Height:</span> ${obj.height}</p>`);
+    $('#modal .row .col-sm').append(`<p><span class='description'>Hair Color:</span> ${obj['hair_color']}</p>`);
+    $('#modal .row .col-sm').append(`<p><span class='description'>Skin Color:</span> ${obj['skin_color']}</p>`);
+    $('#modal .row .col-sm').append(`<p><span class='description'>Mass:</span> ${obj.mass}</p>`);
+    $('#modal .row .col-sm').append(`<p><span class='description'>Eye Color:</span> ${obj['eye_color']}</p>`);
+    $('#modal .row .col-sm').append(`<p><span class='description'>Birth Year:</span> ${obj['birth_year']}</p>`);
+    $('#modal .row .col-sm').append(`<p><span class='description'>Gender:</span> ${obj.gender}</p>`);
     const planetResponse = fetch(`${obj.homeworld}`);
     planetResponse
       .then(data => data.json())
       .then(data => {
         planet = data.name;
-        console.log(`Homeworld: ${planet}`);
+        $('#modal .row .col-sm').append(`<p><span class='description'>Homeworld:</span> ${planet}</p>`);
       });
     // console.log(``);
   });

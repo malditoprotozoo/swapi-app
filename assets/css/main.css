@@ -9,6 +9,7 @@
 body {
   background: url(https://i.imgur.com/wGfs9khh.jpg) repeat center center fixed;
   overflow-x: hidden;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 body #particles-js {
@@ -56,6 +57,10 @@ body #modal .modal-body .row #loader {
 
 body #modal .modal-body .row #loader img {
   max-width: 10em;
+}
+
+body #modal .modal-body .row .description {
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
