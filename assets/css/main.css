@@ -49,11 +49,10 @@ body #sidebar #search-bar:focus {
 
 body #sidebar #logo {
   margin-top: .5em;
-  max-width: 80%;
+  width: 80%;
 }
 
 body #sidebar #search-btn {
-  display: block;
   margin-top: 1em;
   background-color: white;
   color: #ffc500;
@@ -76,6 +75,18 @@ body #content .character {
   width: 100%;
 }
 
+body #modal .modal-content {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+body #modal .description {
+  font-weight: 600;
+}
+
+body #modal .modal-title {
+  font-weight: 700;
+}
+
 body #modal .modal-body .row #loader {
   width: 100%;
   display: flex;
@@ -88,17 +99,13 @@ body #modal .modal-body .row #loader img {
   max-width: 10em;
 }
 
-body #modal .modal-body .row .description {
-  font-weight: 600;
-}
-
 @media (max-width: 768px) {
   body #sidebar {
     position: static;
     width: 100%;
   }
   body #sidebar #logo {
-    width: 50vw;
+    width: 70vw;
   }
   body #content {
     position: static;
@@ -108,6 +115,9 @@ body #modal .modal-body .row .description {
 }
 
 @media (max-width: 576px) {
+  body #sidebar #logo {
+    width: 90vw;
+  }
   body #content .col-sm {
     width: 50%;
   }

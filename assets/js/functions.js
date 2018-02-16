@@ -1,17 +1,20 @@
 const getInfo = text => {
   $('#modal .row').html(`<div id='loader'><img src='assets/img/stormtrooper.gif'></div>`);
+  $('#modal .modal-title').html('');
   const response = fetch(`https://swapi.co/api/people/?search=${text}`);
   response
     .then(data => data.json())
     .then(data => {
       if (data.count !== 0) {
         postInfoModal(data.results);
+        $('#modal').modal('show');
       } else if (data.count === 0) {
         if (checkName(text) === undefined) {
           noData();
           $('#modal').modal('show');
         } else {
           getInfoOutApi(checkName(text));
+          $('#modal').modal('show');
         }
       }
     });
@@ -34,6 +37,7 @@ const postInfoModal = (data) => {
   let results = data.map((obj) => {
     let planet;
     let species;
+    let len = data.length;
     const speciesResponse = fetch(`${obj.species}`);
     speciesResponse
       .then(data => data.json())
@@ -45,7 +49,12 @@ const postInfoModal = (data) => {
           .then(data => {
             planet = data.name;
             $('#modal .row').html(`<div class='col-sm'></div>`);
-            $('#modal .row .col-sm').append(`<p><span class='description'>Name:</span> ${obj.name}</p>`);
+            if (len > 1) {
+              $('#modal .row .col-sm').append(`<div class="alert alert-warning" role="alert">
+              There are too many results for this search. Please try again with more specific keywords.
+              </div>`);
+            };
+            $('#modal .modal-title').html(`${obj.name}`);
             $('#modal .row .col-sm').append(`<p><span class='description'>Height:</span> ${obj.height}</p>`);
             $('#modal .row .col-sm').append(`<p><span class='description'>Hair Color:</span> ${obj['hair_color']}</p>`);
             $('#modal .row .col-sm').append(`<p><span class='description'>Skin Color:</span> ${obj['skin_color']}</p>`);
@@ -76,7 +85,7 @@ const getInfoOutApi = text => {
   characters.map((obj) => {
     if (obj.name.includes(text) === true) {
       $('#modal .row').html(`<div class='col-sm'></div>`);
-      $('#modal .row .col-sm').append(`<p><span class='description'>Name:</span> ${obj.name}</p>`);
+      $('#modal .modal-title').html(`${obj.name}`);
       $('#modal .row .col-sm').append(`<p><span class='description'>Height:</span> ${obj.height}</p>`);
       $('#modal .row .col-sm').append(`<p><span class='description'>Hair Color:</span> ${obj['hair_color']}</p>`);
       $('#modal .row .col-sm').append(`<p><span class='description'>Skin Color:</span> ${obj['skin_color']}</p>`);
@@ -92,6 +101,7 @@ const getInfoOutApi = text => {
 
 const noData = () => {
   $('#modal .row').html(`<div class='col-sm'></div>`);
-  let errorMsg = `<div class="alert alert-danger" role="alert">These Are Not the Characters You Are Looking For</div>`;
+  $('#modal .modal-title').html(`Hey!`);
+  let errorMsg = `<div class="alert alert-danger" role="alert">These Are Not the Characters You Are Looking For...</div>`;
   $('#modal .col-sm').append(errorMsg);
 }
