@@ -64,6 +64,11 @@ body #sidebar #search-btn:hover {
   color: white;
 }
 
+body #sidebar p {
+  color: white;
+  margin-top: 2em;
+}
+
 body #content {
   width: 60vw;
   position: absolute;
