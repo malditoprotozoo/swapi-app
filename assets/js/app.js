@@ -1,9 +1,17 @@
 $(document).ready(function() {
-  $('#btn-search').click(function() {
+  $('#search-btn').click(function() {
     event.preventDefault();
-    let text = $('#input-search').val();
+    let text = $('#search-bar').val();
     getInfo(text);
-    $('#input-search').val('');
+    $('#search-bar').val('');
+  });
+
+  $('#search-bar').keyup(function(e) {
+    if (e.keyCode === 13) {
+      let text = $('#search-bar').val();
+      getInfo(text);
+      $('#search-bar').val('');
+    };
   });
 
   $('.character').click(function() {

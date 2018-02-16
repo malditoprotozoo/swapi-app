@@ -16,6 +16,7 @@ body #particles-js {
   position: fixed;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 body #sidebar {
@@ -31,9 +32,37 @@ body #sidebar {
   text-align: center;
 }
 
+body #sidebar #search-bar {
+  color: white;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #ffc500;
+  margin-top: 2em;
+  transition: border 0.8s ease-out;
+}
+
+body #sidebar #search-bar:focus {
+  outline: none;
+  border-bottom: 3px solid white;
+}
+
 body #sidebar #logo {
   margin-top: .5em;
   max-width: 80%;
+}
+
+body #sidebar #search-btn {
+  display: block;
+  margin-top: 1em;
+  background-color: white;
+  color: #ffc500;
+  font-weight: 600;
+}
+
+body #sidebar #search-btn:hover {
+  background-color: #ffc500;
+  color: white;
 }
 
 body #content {

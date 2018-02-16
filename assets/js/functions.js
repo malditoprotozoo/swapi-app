@@ -8,7 +8,8 @@ const getInfo = text => {
         postInfoModal(data.results);
       } else if (data.count === 0) {
         if (checkName(text) === undefined) {
-          console.log('error');
+          noData();
+          $('#modal').modal('show');
         } else {
           getInfoOutApi(checkName(text));
         }
@@ -43,7 +44,7 @@ const postInfoModal = (data) => {
           .then(data => data.json())
           .then(data => {
             planet = data.name;
-            $('#modal .row').html(`<div class='col-sm'></div>`)
+            $('#modal .row').html(`<div class='col-sm'></div>`);
             $('#modal .row .col-sm').append(`<p><span class='description'>Name:</span> ${obj.name}</p>`);
             $('#modal .row .col-sm').append(`<p><span class='description'>Height:</span> ${obj.height}</p>`);
             $('#modal .row .col-sm').append(`<p><span class='description'>Hair Color:</span> ${obj['hair_color']}</p>`);
@@ -88,3 +89,9 @@ const getInfoOutApi = text => {
     };
   });
 };
+
+const noData = () => {
+  $('#modal .row').html(`<div class='col-sm'></div>`);
+  let errorMsg = `<div class="alert alert-danger" role="alert">These Are Not the Characters You Are Looking For</div>`;
+  $('#modal .col-sm').append(errorMsg);
+}

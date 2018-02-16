@@ -13,6 +13,7 @@ body
     position: fixed
     width: 100%
     height: 100%
+    z-index: -1
   #sidebar
     @include flex
     position: fixed
@@ -21,9 +22,28 @@ body
     height: 100vh
     background-color: rgba(white, $alpha)
     text-align: center
+    #search-bar
+      color: white
+      font-weight: 600
+      background: transparent
+      border: none
+      border-bottom: 3px solid $sw-yellow
+      margin-top: 2em
+      transition: border 0.8s ease-out
+    #search-bar:focus
+      outline: none
+      border-bottom: 3px solid white
     #logo
       margin-top: .5em
       max-width: 80%
+    #search-btn
+      margin-top: 1em
+      background-color: white
+      color: $sw-yellow
+      font-weight: 600
+      &:hover
+        background-color: $sw-yellow
+        color: white
   #content
     width: 60vw
     position: absolute
